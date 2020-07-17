@@ -1,0 +1,80 @@
+#**List, Stacks and Queue**
+- Reusability
+- Maintainability
+
+## **List**
+- java.util.List
+- Collection of items which each items have their own position
+- Exp: Task list, Name list, Playlists
+- Basic Operations: add(), remove(), get(Element position), clear(), isEmpty()
+
+**Simple Declaration: List**
+        private List<String> nameList = new ArrayList<>();
+
+        nameList.add("Potato");
+
+        nameList.remove("Potato"); // or remove (1);
+
+        nameList.get(1);
+
+        // Clear everything
+        if (!nameList.isEmpty()) {
+          nameList.clear();
+        }
+
+**End of Line**
+
+## **Stacks**
+- java.util.Stack
+- LIFO Principle
+- The last entry is added, the first one to be removed
+- No provision to search an entry
+- Exp: checking for palindromes, reverse a string, check for balance
+- Basic Operations: push()**add()**, pop()**remove()**, peek()**return first element without removing it**, isEmpty(), clear() 
+
+**Simple Declaration: Stacks**
+        private Stack<Integer> stack = new Stack<>();
+
+        System.out.println("Empty Stack:" + stack.isEmpty()); // return true or false
+
+        stack.push(100);
+
+        System.out.println("Stack elements are : " + stack);
+        System.out.println("Stack: Pop Operation : " + stack.pop());
+        System.out.println("Stack: After Pop Operation : " + stack);
+        System.out.println("Stack : search() Operation : " + stack.search(1002));
+        System.out.println("If Stack is empty : " + stack.isEmpty());
+
+**End of Line**
+
+## **Queue**
+- java.util.concurrent.ArrayBlockingQueue
+- java.util.LinkedList;
+- java.util.Queue
+- FIFO Principle
+- Elements enter a queue at the back, elements are removed from the front
+- Basic Operations: enqueue(), dequeue(), isEmpty(), getFront(), size()
+- No provision to search entry
+
+**Simple Declaration: Queue**
+        Queue<Integer> q = new LinkedList<>(); 
+  
+        // Adds elements {0, 1, 2, 3, 4}
+        for (int i = 0; i < 5; i++) 
+            q.add(i); 
+  
+        // Display contents of the queue. 
+        System.out.println("Elements of queue: " + q); 
+  
+        // To remove the head of queue
+        System.out.println("Removed element: " + q.remove()); 
+  
+        System.out.println(q); 
+  
+        // To view the head of queue without removing it
+        System.out.println("Head:" + q.peek());
+        
+        // Display size of the queue
+        System.out.println("Size:" + q.size()); 
+        
+**End of Line**
